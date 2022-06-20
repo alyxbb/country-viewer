@@ -1,0 +1,28 @@
+body{
+    font-family: bestfont;
+    color: palevioletred;
+    background-color: magenta;
+}
+table {
+    border:1cm dashed yellow;
+    border-collapse: collapse;
+    width:100%;
+    background-image: url("beginnerfriendly.png");
+}
+tr, td,th {
+    border:10px dashed cyan;
+        border-collapse: collapse;
+}
+th{
+        background-color: orangered;
+}
+tr,td{
+
+
+
+}
+@font-face{
+    font-family: "bestfont";
+    src: url('Freakshow.ttf'),
+    url('Freakshow.otf'); 
+}

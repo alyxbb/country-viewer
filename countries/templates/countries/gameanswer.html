@@ -1,0 +1,17 @@
+{% extends "countries/base.html" %}{% block content %}{% load static %}
+{% if answer == guess%}
+
+<h1> <span background-color="green">correct</span></h1>
+
+{%else%}
+<h1>incorrect</h1>
+<p>the correct answer was {{answer}}</p>
+{%endif%}
+<h4>play again</h4>
+<h5>flag game</h5>
+<img src="https://www.countryflags.io/{{country.alpha2}}/flat/64.png" width="256px">
+<form action="/game/answer" method="get">
+<input type="text" name="guess" id="">
+<input type="hidden" name="answer" value={{country.name}}>
+</form>
+{% endblock content %}

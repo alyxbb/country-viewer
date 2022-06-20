@@ -1,0 +1,8 @@
+{% extends "countries/base.html" %}{% block content %}{% load static %}
+<h1>flag game</h1>
+<img src="https://www.countryflags.io/{{country.alpha2}}/flat/64.png" width="256px">
+<form action="/game/answer" method="get">
+<input type="text" name="guess" id="">
+<input type="hidden" name="answer" value={{country.name}}>
+</form>
+{% endblock content %}

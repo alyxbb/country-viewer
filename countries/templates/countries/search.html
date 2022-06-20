@@ -1,0 +1,18 @@
+{% extends "countries/base.html" %}{% block content %}{% load static %}
+ <p>Input a country name</p> 
+<form action="/search" method="get">
+		<input type="text" id="keyword" name="q" placeholder="Search.."></input>
+    <input type="submit" value="search" > <br>
+</form>
+
+       <table id="country-matches">
+
+
+            {% for country in object_list %}
+         <a href="/country/{{country.slug}}" class="btn-country">{{country.name}}</a>
+
+
+            {% endfor %}
+
+</table><br>
+{% endblock content %}

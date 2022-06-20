@@ -1,0 +1,73 @@
+{% extends "countries/base.html" %}{% block content %}{% load static %}
+<table>
+    <tr>
+        <td>name</td>
+        <td>{{object.name}}</td>
+    </tr>
+    
+    <tr>
+        <td>2 letter code</td>
+        <td>{{object.alpha2}}</td>
+    </tr>
+    <tr>
+        <td>3 letter code</td>
+        <td>{{object.alpha3}}</td>
+    </tr>
+    <tr>
+        <td>country code</td>
+        <td>{{object.countrycode}}</td>
+    </tr>
+        <tr>
+        <td>region</td>
+        {% if object.region%}
+        <td>{{object.region}}</td>
+                        {% else%}
+        <td>N/A</td>
+    {%endif%}
+    </tr>
+        </tr>
+    <tr>
+        <td>sub region</td>
+        {% if object.subregion%}
+        <td>{{object.subregion}}</td>
+                        {% else%}
+        <td>N/A</td>
+    {%endif%}
+    </tr>
+    <tr>
+        <td>intermediate region</td>
+        {% if object.interregion%}
+        <td>{{object.interregion}}</td>
+                {% else%}
+        <td>N/A</td>
+    {%endif%}
+    </tr>
+          <tr>
+        <td>region code</td>
+        {%if object.regioncode%}
+        <td>{{object.regioncode}}</td>
+        {% else%}
+        <td>N/A</td>
+    {%endif%}
+    </tr>
+    <tr>
+        <td>sub region code</td>
+        {%if object.subregioncode%}
+        <td>{{object.subregioncode}}</td>
+        {% else%}
+        <td>N/A</td>
+    {%endif%}
+    </tr>
+
+    <tr>
+        <td>intermediate region code</td>
+            {%if object.interregioncode%}
+        <td>{{object.interregioncode}}</td>
+            {% else%}
+        <td>N/A</td>
+    {%endif%}
+    </tr>
+
+
+</table>
+{% endblock content %}

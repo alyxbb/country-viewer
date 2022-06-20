@@ -1,0 +1,7 @@
+{% extends "countries/base.html" %}{% block content %}{% load static %}
+ <p>Input part of a country name</p> 
+<form action="/search" method="get">
+		<input type="text" id="keyword" name="q" placeholder="Search.."></input>
+    <input type="submit" value="search" > <br>
+</form>
+{% endblock content %}

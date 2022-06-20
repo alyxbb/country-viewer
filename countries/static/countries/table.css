@@ -1,0 +1,23 @@
+body {
+  font-family: arial, sans-serif;
+  color: black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  text-align: center;
+  margin-left: 10px;
+}
+
+tr.even {
+  background-color: white;
+}
+
+tr.odd{
+  background-color: lightgrey;
+}

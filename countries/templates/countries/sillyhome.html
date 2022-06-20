@@ -1,0 +1,22 @@
+{% extends "countries/base.html" %}{% block content %}{% load static %}
+
+    <link href="{% static 'countries/dumbstyle.css' %}" rel="stylesheet" type="text/css" />
+
+
+      <table>
+
+            <tr>
+                  <th>Country Name</th>
+                  <th>Flag</th>
+                  <th>More Information</th>
+            </tr>
+            {% for country in object_list %}
+            <tr>
+                  <td><a href="/country/{{country.slug}}">{{country.name}}</a></td>
+                  <td><img src="https://www.countryflags.io/{{country.alpha2}}/flat/64.png" alt="flag of {{country.name}}"></td>
+                  <td> <a href="https://en.wikipedia.org/wiki/{{country.name}}">External Link </a> </td>
+            </tr>
+            {% endfor %}
+      </table>
+
+{% endblock content %}
